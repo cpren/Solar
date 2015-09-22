@@ -52,26 +52,56 @@
                               <block type="controls_if" id="35" inline="false">
                                 <mutation elseif="2" else="1"></mutation>
                                 <value name="IF0">
-                                  <block type="logic_compare" id="108" inline="true">
-                                    <field name="OP">LT</field>
+                                  <block type="logic_operation" id="166" inline="true">
+                                    <field name="OP">LAND</field>
                                     <value name="A">
-                                      <block type="math_arithmetic" id="117" inline="true">
-                                        <field name="OP">MINUS</field>
+                                      <block type="logic_compare" id="108" inline="true">
+                                        <field name="OP">LT</field>
                                         <value name="A">
-                                          <block type="sensor_light" id="109">
-                                            <field name="LIGHT">RIGHT</field>
+                                          <block type="math_arithmetic" id="117" inline="true">
+                                            <field name="OP">MINUS</field>
+                                            <value name="A">
+                                              <block type="sensor_light" id="109">
+                                                <field name="LIGHT">RIGHT</field>
+                                              </block>
+                                            </value>
+                                            <value name="B">
+                                              <block type="sensor_light" id="110">
+                                                <field name="LIGHT">LEFT</field>
+                                              </block>
+                                            </value>
                                           </block>
                                         </value>
                                         <value name="B">
-                                          <block type="sensor_light" id="110">
-                                            <field name="LIGHT">LEFT</field>
+                                          <block type="math_number" id="124">
+                                            <field name="NUM">10</field>
                                           </block>
                                         </value>
                                       </block>
                                     </value>
                                     <value name="B">
-                                      <block type="math_number" id="124">
-                                        <field name="NUM">10</field>
+                                      <block type="logic_compare" id="167" inline="true">
+                                        <field name="OP">LT</field>
+                                        <value name="A">
+                                          <block type="math_arithmetic" id="168" inline="true">
+                                            <field name="OP">MINUS</field>
+                                            <value name="A">
+                                              <block type="sensor_light" id="169">
+                                                <field name="LIGHT">LEFT</field>
+                                              </block>
+                                            </value>
+                                            <value name="B">
+                                              <block type="sensor_light" id="170">
+                                                <field name="LIGHT">RIGHT</field>
+                                              </block>
+                                            </value>
+                                          </block>
+                                        </value>
+                                        <value name="B">
+                                          <block type="math_number" id="171">
+                                            <field name="NUM">10</field>
+                                          </block>
+                                        </value>
                                       </block>
                                     </value>
                                   </block>
