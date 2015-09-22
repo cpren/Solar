@@ -83,13 +83,13 @@
                                 <statement name="ELSE">
                                   <block type="movement_setmotors" id="63" inline="true">
                                     <value name="BOTHMOVLEFT">
-                                      <block type="math_number" id="87">
-                                        <field name="NUM">-50</field>
+                                      <block type="math_number" id="88">
+                                        <field name="NUM">50</field>
                                       </block>
                                     </value>
                                     <value name="BOTHMOVRIGHT">
-                                      <block type="math_number" id="88">
-                                        <field name="NUM">50</field>
+                                      <block type="math_number" id="87">
+                                        <field name="NUM">-50</field>
                                       </block>
                                     </value>
                                   </block>
