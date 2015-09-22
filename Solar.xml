@@ -106,11 +106,6 @@
                             <statement name="DO1">
                               <block type="movement_setmotors" id="63" inline="true">
                                 <value name="BOTHMOVLEFT">
-                                  <block type="sensor_light" id="64">
-                                    <field name="LIGHT">LEFT</field>
-                                  </block>
-                                </value>
-                                <value name="BOTHMOVRIGHT">
                                   <block type="math_arithmetic" id="65" inline="true">
                                     <field name="OP">MULTIPLY</field>
                                     <value name="A">
@@ -123,6 +118,11 @@
                                         <field name="NUM">-1</field>
                                       </block>
                                     </value>
+                                  </block>
+                                </value>
+                                <value name="BOTHMOVRIGHT">
+                                  <block type="sensor_light" id="64">
+                                    <field name="LIGHT">LEFT</field>
                                   </block>
                                 </value>
                               </block>
