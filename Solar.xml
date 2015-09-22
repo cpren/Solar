@@ -47,17 +47,86 @@
                           </block>
                         </value>
                         <next>
-                          <block type="movement_setmotors" id="23" inline="true">
-                            <value name="BOTHMOVLEFT">
-                              <block type="sensor_light" id="25">
-                                <field name="LIGHT">RIGHT</field>
+                          <block type="controls_if" id="35" inline="false">
+                            <mutation elseif="1"></mutation>
+                            <value name="IF0">
+                              <block type="logic_compare" id="42" inline="true">
+                                <field name="OP">LT</field>
+                                <value name="A">
+                                  <block type="sensor_light" id="25">
+                                    <field name="LIGHT">RIGHT</field>
+                                  </block>
+                                </value>
+                                <value name="B">
+                                  <block type="sensor_light" id="24">
+                                    <field name="LIGHT">LEFT</field>
+                                  </block>
+                                </value>
                               </block>
                             </value>
-                            <value name="BOTHMOVRIGHT">
-                              <block type="sensor_light" id="24">
-                                <field name="LIGHT">LEFT</field>
+                            <statement name="DO0">
+                              <block type="movement_setmotors" id="23" inline="true">
+                                <value name="BOTHMOVLEFT">
+                                  <block type="sensor_light" id="61">
+                                    <field name="LIGHT">RIGHT</field>
+                                  </block>
+                                </value>
+                                <value name="BOTHMOVRIGHT">
+                                  <block type="math_arithmetic" id="53" inline="true">
+                                    <field name="OP">MULTIPLY</field>
+                                    <value name="A">
+                                      <block type="sensor_light" id="62">
+                                        <field name="LIGHT">RIGHT</field>
+                                      </block>
+                                    </value>
+                                    <value name="B">
+                                      <block type="math_number" id="60">
+                                        <field name="NUM">-1</field>
+                                      </block>
+                                    </value>
+                                  </block>
+                                </value>
+                              </block>
+                            </statement>
+                            <value name="IF1">
+                              <block type="logic_compare" id="68" inline="true">
+                                <field name="OP">GT</field>
+                                <value name="A">
+                                  <block type="sensor_light" id="69">
+                                    <field name="LIGHT">RIGHT</field>
+                                  </block>
+                                </value>
+                                <value name="B">
+                                  <block type="sensor_light" id="70">
+                                    <field name="LIGHT">LEFT</field>
+                                  </block>
+                                </value>
                               </block>
                             </value>
+                            <statement name="DO1">
+                              <block type="movement_setmotors" id="63" inline="true">
+                                <value name="BOTHMOVLEFT">
+                                  <block type="sensor_light" id="64">
+                                    <field name="LIGHT">LEFT</field>
+                                  </block>
+                                </value>
+                                <value name="BOTHMOVRIGHT">
+                                  <block type="math_arithmetic" id="65" inline="true">
+                                    <field name="OP">MULTIPLY</field>
+                                    <value name="A">
+                                      <block type="sensor_light" id="66">
+                                        <field name="LIGHT">LEFT</field>
+                                      </block>
+                                    </value>
+                                    <value name="B">
+                                      <block type="math_number" id="67">
+                                        <field name="NUM">-1</field>
+                                      </block>
+                                    </value>
+                                  </block>
+                                </value>
+                              </block>
+                            </statement>
                           </block>
                         </next>
                       </block>
