@@ -50,7 +50,7 @@
                             </value>
                             <next>
                               <block type="controls_if" id="35" inline="false">
-                                <mutation elseif="1" else="1"></mutation>
+                                <mutation elseif="2" else="1"></mutation>
                                 <value name="IF0">
                                   <block type="logic_compare" id="108" inline="true">
                                     <field name="OP">LT</field>
@@ -119,7 +119,22 @@
                                     </value>
                                   </block>
                                 </statement>
-                                <statement name="ELSE">
+                                <value name="IF2">
+                                  <block type="logic_compare" id="144" inline="true">
+                                    <field name="OP">GT</field>
+                                    <value name="A">
+                                      <block type="sensor_light" id="145">
+                                        <field name="LIGHT">RIGHT</field>
+                                      </block>
+                                    </value>
+                                    <value name="B">
+                                      <block type="sensor_light" id="146">
+                                        <field name="LIGHT">LEFT</field>
+                                      </block>
+                                    </value>
+                                  </block>
+                                </value>
+                                <statement name="DO2">
                                   <block type="movement_setmotors" id="63" inline="true">
                                     <value name="BOTHMOVLEFT">
                                       <block type="math_number" id="88">
@@ -132,6 +147,9 @@
                                       </block>
                                     </value>
                                   </block>
+                                </statement>
+                                <statement name="ELSE">
+                                  <block type="movement_stutter" id="159"></block>
                                 </statement>
                               </block>
                             </next>
